@@ -1,0 +1,53 @@
+@import "tailwindcss";
+body {
+  font-family: 'Poppins', sans-serif;
+}
+/* Sway animation */
+@keyframes sway {
+  0%   { transform: rotate(-2deg); }
+  50%  { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+
+/* Sparkle */
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.sway {
+  animation: sway 4s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.sparkle {
+  animation: sparkle 0.8s ease-out forwards;
+}
+/* Light particles */
+
+.particle {
+  position: absolute;
+  top: -10px;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}

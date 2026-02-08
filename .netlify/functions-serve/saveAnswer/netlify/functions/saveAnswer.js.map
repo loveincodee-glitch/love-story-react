@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["file:///D:/LittleWeb/vite-project/netlify/functions/saveAnswer.js"],
+  "sourceRoot": "C:/Users/admin/AppData/Local/Temp/tmp-7260-EEsbq2EZf1Ep",
+  "sourcesContent": ["let answers = [];\r\n\r\nexport async function handler(event) {\r\n\r\n  if (event.httpMethod !== \"POST\") {\r\n    return {\r\n      statusCode: 405,\r\n      body: \"Method Not Allowed\",\r\n    };\r\n  }\r\n\r\n  const data = JSON.parse(event.body);\r\n\r\n  answers.push({\r\n    ...data,\r\n    time: new Date().toISOString(),\r\n  });\r\n\r\n  console.log(\"Saved:\", data);\r\n\r\n  return {\r\n    statusCode: 200,\r\n    body: JSON.stringify({ success: true }),\r\n  };\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAAI,UAAU,CAAC;AAEf,eAAsB,QAAQ,OAAO;AAEnC,MAAI,MAAM,eAAe,QAAQ;AAC/B,WAAO;AAAA,MACL,YAAY;AAAA,MACZ,MAAM;AAAA,IACR;AAAA,EACF;AAEA,QAAM,OAAO,KAAK,MAAM,MAAM,IAAI;AAElC,UAAQ,KAAK;AAAA,IACX,GAAG;AAAA,IACH,OAAM,oBAAI,KAAK,GAAE,YAAY;AAAA,EAC/B,CAAC;AAED,UAAQ,IAAI,UAAU,IAAI;AAE1B,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU,EAAE,SAAS,KAAK,CAAC;AAAA,EACxC;AACF;",
+  "names": []
+}

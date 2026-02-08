@@ -1,0 +1,1 @@
+{"functions":[{"bundler":"nft","buildData":{"runtimeAPIVersion":1},"mainFile":"D:\\LittleWeb\\vite-project\\netlify\\functions\\saveAnswer.js","name":"saveAnswer","priority":10,"runtimeVersion":"nodejs24.x","path":"D:\\LittleWeb\\vite-project\\.netlify\\functions\\saveAnswer.zip","runtime":"js"}],"system":{"arch":"x64","platform":"win32"},"timestamp":1769711124915,"version":1}
